@@ -5,40 +5,43 @@ using UnityEngine;
 public class Interactable : MonoBehaviour
 {
     [SerializeField] private GameObject _UIContainer;
+    //referencing for IInteractable, because we use it here for all type interactables(pickups, doors, etc.)
+    private IInteractable _interactable;
+    private bool _isInteractable;
 
     private void Awake()
     {
         if (_UIContainer != null) _UIContainer.SetActive(false);
+        _interactable = GetComponent<IInteractable>();
+        _isInteractable = false;
     }
 
-    /*
-    //OnTriggerEnter, collect the item
     private void OnTriggerEnter(Collider other)
-    {
-        if(other.CompareTag("Player"))
-        {
-            //Modify a player stat
-            Debug.Log("add Health");
-
-            //Destroy this gameObject
-            Destroy(gameObject);
-        }
-    }
-    */
-
-    private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            //Show UI
-            if (_UIContainer != null) _UIContainer.SetActive(true);
-            if(Input.GetKeyDown(KeyCode.E)) Debug.Log("Interacted");
+            if (_UIContainer != null)
+                _UIContainer.SetActive(true); //Show UI
+            _isInteractable = true;
+        }
+    }
+
+    private void Update()
+    {
+        if (_isInteractable && Input.GetKeyDown(KeyCode.E))
+        {
+            _interactable.Interact();
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        //Hide UI
-        if (_UIContainer != null) _UIContainer.SetActive(false);
+        if(other.CompareTag("Player"))
+        {
+            //Hide UI
+            if (_UIContainer != null)
+                _UIContainer.SetActive(false);
+            _isInteractable = false;
+        }
     }
 }
