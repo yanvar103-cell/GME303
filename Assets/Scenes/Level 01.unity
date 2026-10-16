@@ -1927,7 +1927,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb76e26d8ce244c49a6a1d9a542f7095, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraTransform: {fileID: 321590165}
 --- !u!1 &926727594 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6264172887834377780, guid: dc84ee2b07389874c937a60b0273ff2e,
@@ -2901,6 +2900,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Light B
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734604891027102225, guid: 67b060a9e4e512f429a6197c45c7c844,
+        type: 3}
+      propertyPath: _isOn
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4242,7 +4246,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb76e26d8ce244c49a6a1d9a542f7095, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraTransform: {fileID: 321590165}
 --- !u!1 &2115921889
 GameObject:
   m_ObjectHideFlags: 0
@@ -4488,6 +4491,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Light A
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734604891027102225, guid: 67b060a9e4e512f429a6197c45c7c844,
+        type: 3}
+      propertyPath: _isOn
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
