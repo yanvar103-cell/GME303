@@ -13,4 +13,6 @@ public class PickupItem : MonoBehaviour, IInteractable //inherit from IInteracta
     {
         Debug.Log("Interacting with" + gameObject.name);
     }
+
+    public void Activate() { }
 }

@@ -27,4 +27,6 @@ public class ToggleLight : MonoBehaviour, IInteractable
             _emissiveMaterial.SetColor("_EmissionColor", Color.black);
         _isOn = !_isOn;
     }
+
+    public void Activate() { }
 }
