@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class PickupItem : MonoBehaviour, IInteractable //inherit from IInteractable
 {
-    void Start()
-    {
-        Debug.Log("This is a pickup item");
-    }
+    //Reference to our InventoryManager item type
+    [SerializeField] private InventoryManager.AllItems _itemType;
 
     public void Interact()//here we define commands when this method calls
     {
-        Debug.Log("Interacting with" + gameObject.name);
+        //Add this item to the inventory manager
+        InventoryManager.Instance.AddItems(_itemType);
+        //Destroy gameObject
+        Destroy(gameObject);
     }
 
     public void Activate(bool _isActive) { }

@@ -9,6 +9,11 @@ public class Door : MonoBehaviour, IInteractable
     //reference to toggle the door lock
     [SerializeField] private bool _isLocked;
     [SerializeField] private GameObject[] _doorPanels;
+
+    //Designer need the ability to require an item for the door(keycard)
+    [SerializeField] private bool _requiresItem;
+    //Reference to the required item
+    [SerializeField] private InventoryManager.AllItems _requiredItem;
     
     void Start()
     {
@@ -27,16 +32,23 @@ public class Door : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        //if the door is locked, stay locked and print a message that tells the player what to do
-        //if the door is unlocked, then open the door
-        if (!_isLocked)
+        if (!_isLocked)//if the door is unlocked, then open the door
         {
             _isOpen = !_isOpen; //reverse the bool(if false, set it true, if true, set it false)
             _anim.SetBool("IsOpen", _isOpen);
         }
-        else
+        else //if the door is locked, stay locked and print a message that tells the player what to do
         {
-            Debug.Log("Locked! Check the terminal");
+            //Check if door requires an item
+            if(_requiresItem)
+            {
+                //Check if we have the required item
+                if (HasRequiredItem(_requiredItem))
+                    Activate(true); //Unlock the door(Activate)
+                else
+                    Debug.Log("Check the Terminal!"); //If we don't have the required item, check the terminal
+            }
+            Debug.Log("Locked! Check the terminal");//If it doesn't require the item
         }
     }
 
@@ -58,5 +70,14 @@ public class Door : MonoBehaviour, IInteractable
             _doorPanels[0].SetActive(false);
             _doorPanels[1].SetActive(true);
         }
+    }
+
+    //Method to check if we have the required item
+    public bool HasRequiredItem(InventoryManager.AllItems _itemRequired)
+    {
+        if (InventoryManager.Instance._inventoryItems.Contains(_itemRequired))
+            return true;
+        else
+            return false;
     }
 }
