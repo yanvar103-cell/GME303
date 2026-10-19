@@ -20,12 +20,12 @@ public class Terminal : MonoBehaviour, IInteractable
             {
                 Debug.Log(_target.name + " is powered up!");
                 //activate those targers via a new method
-                interactable.Activate();
+                interactable.Activate(_isPowered);
             }
         }
     }
 
-    public void Activate()
+    public void Activate(bool _isActive)
     {
         //if powered off, then activate the terminal
     }

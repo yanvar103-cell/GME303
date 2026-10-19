@@ -40,15 +40,23 @@ public class Door : MonoBehaviour, IInteractable
         }
     }
 
-    public void Activate()
+    public void Activate(bool _isActive)
     {
-        UnlockDoor();//unlock the door
+        UnlockDoor(_isActive);//lock/unlock the door
     }
 
-    private void UnlockDoor()
+    private void UnlockDoor(bool _isActive)
     {
-        _isLocked = false;
-        _doorPanels[0].SetActive(false);
-        _doorPanels[1].SetActive(true);
+        _isLocked = !_isActive;
+        if (_isLocked)
+        {
+            _doorPanels[0].SetActive(true);
+            _doorPanels[1].SetActive(false);
+        }
+        else
+        {
+            _doorPanels[0].SetActive(false);
+            _doorPanels[1].SetActive(true);
+        }
     }
 }

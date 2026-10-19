@@ -28,5 +28,5 @@ public class ToggleLight : MonoBehaviour, IInteractable
         _isOn = !_isOn;
     }
 
-    public void Activate() { }
+    public void Activate(bool _isActive) { }
 }
