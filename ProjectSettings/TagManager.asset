@@ -3,12 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - CinemachineTarget
+  - PowerCore
+  - Pad
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - PhysicsObjects
   - Water
   - UI
   - 
