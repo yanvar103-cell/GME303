@@ -503,10 +503,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 160042862}
     m_Modifications:
+    - target: {fileID: 3905679422752595804, guid: d03cb15983a25bd46b5998d9422626b1,
+        type: 3}
+      propertyPath: _playerPickupTransform
+      value: 
+      objectReference: {fileID: 272414611}
     - target: {fileID: 5916395232907245302, guid: d03cb15983a25bd46b5998d9422626b1,
         type: 3}
       propertyPath: m_Name
       value: PowerCore
+      objectReference: {fileID: 0}
+    - target: {fileID: 5916395232907245302, guid: d03cb15983a25bd46b5998d9422626b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6117410976680124670, guid: d03cb15983a25bd46b5998d9422626b1,
         type: 3}
@@ -599,7 +609,7 @@ Transform:
   m_GameObject: {fileID: 272414610}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.014, z: 0.291}
+  m_LocalPosition: {x: 0, y: 1.01, z: 0.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
