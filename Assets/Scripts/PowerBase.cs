@@ -5,30 +5,27 @@ using UnityEngine;
 public class PowerBase : MonoBehaviour
 {
     [SerializeField] private Transform _snapPoint;
-    private PowerCore _currentCore;
+    private bool _isBusy = false;
 
-    private void OnCollisionEnter(Collision collision)
+    public virtual void OnCollisionEnter(Collision collision)
     {
-        if (_currentCore != null) return; // already holding one
+        if (_isBusy) return; // already holding one
         if (collision.gameObject.CompareTag("PowerCore"))
         {
-            PowerCore core = collision.gameObject.GetComponent<PowerCore>();
+            _isBusy = true;
             Debug.Log("Power Core Detected!");
             //Match the transform of the power core to the power base
-            //collision.transform.position = _snapPoint.position;
-            //collision.transform.rotation = _snapPoint.rotation;
-
-            _currentCore = core;
-            core.SnapTo(_snapPoint, this);
+            collision.transform.position = _snapPoint.position;
+            collision.transform.rotation = _snapPoint.rotation;
         }
     }
 
-    public void ReleaseCore(PowerCore core)
+    private void OnCollisionExit(Collision collision)
     {
-        if (_currentCore == core)
+        if (collision.gameObject.CompareTag("PowerCore"))
         {
+            _isBusy = false;
             Debug.Log("Power Core Removed!");
-            _currentCore = null;
         }
     }
 }
