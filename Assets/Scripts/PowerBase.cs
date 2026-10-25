@@ -20,7 +20,7 @@ public class PowerBase : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit(Collision collision)
+    public virtual void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.CompareTag("PowerCore"))
         {

@@ -10,6 +10,8 @@ public class Door : MonoBehaviour, IInteractable
     [SerializeField] private bool _isLocked;
     [SerializeField] private GameObject[] _doorPanels;
 
+    [SerializeField] private string _howToOpen;//every door have it's own open requirements
+
     //Designer need the ability to require an item for the door(keycard)
     [SerializeField] private bool _requiresItem;
     //Reference to the required item
@@ -46,9 +48,9 @@ public class Door : MonoBehaviour, IInteractable
                 if (HasRequiredItem(_requiredItem))
                     Activate(true); //Unlock the door(Activate)
                 else
-                    Debug.Log("Check the Terminal!"); //If we don't have the required item, check the terminal
+                    Debug.Log(_howToOpen); //If we don't have the required item, check the terminal
             }
-            Debug.Log("Locked! Check the terminal");//If it doesn't require the item
+            Debug.Log(_howToOpen);//If it doesn't require the item
         }
     }
 

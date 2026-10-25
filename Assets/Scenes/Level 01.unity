@@ -361,6 +361,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4131458367799505999, guid: 09dcbb2a10a4fcb46b75b2a1854db554,
+        type: 3}
+      propertyPath: powerLevel
+      value: 
+      objectReference: {fileID: 11400000, guid: 43b1dda6d26af9e4b9aae0add766a153,
+        type: 2}
     - target: {fileID: 4193827149080483240, guid: 09dcbb2a10a4fcb46b75b2a1854db554,
         type: 3}
       propertyPath: m_Name
@@ -377,6 +383,29 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 161989255}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &180367517 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4193827149080483240, guid: 09dcbb2a10a4fcb46b75b2a1854db554,
+    type: 3}
+  m_PrefabInstance: {fileID: 1438720743}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &180367521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180367517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38a74bf8e786d0849aa2eb817f2f5e06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _snapPoint: {fileID: 2138504436}
+  requiredPowerLevel: 35
+  _targets:
+  - {fileID: 622502915}
+  _isActivated: 0
 --- !u!1 &203844586
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,6 +534,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3905679422752595804, guid: d03cb15983a25bd46b5998d9422626b1,
         type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 180367521}
+    - target: {fileID: 3905679422752595804, guid: d03cb15983a25bd46b5998d9422626b1,
+        type: 3}
       propertyPath: _playerPickupTransform
       value: 
       objectReference: {fileID: 272414611}
@@ -627,6 +661,16 @@ PrefabInstance:
         type: 3}
       propertyPath: controlPanelType
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006034998168454293, guid: 4b7e8d8046d3d414bbaf8054eea582ef,
+        type: 3}
+      propertyPath: _isLocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006034998168454293, guid: 4b7e8d8046d3d414bbaf8054eea582ef,
+        type: 3}
+      propertyPath: _howToOpen
+      value: Locked! Insert the keycard!
       objectReference: {fileID: 0}
     - target: {fileID: 5006034998168454293, guid: 4b7e8d8046d3d414bbaf8054eea582ef,
         type: 3}
@@ -1313,6 +1357,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4131458367799505999, guid: 09dcbb2a10a4fcb46b75b2a1854db554,
+        type: 3}
+      propertyPath: powerLevel
+      value: 
+      objectReference: {fileID: 11400000, guid: 882e5f9c3f0db9c40a017fa612efa174,
+        type: 2}
     - target: {fileID: 4193827149080483240, guid: 09dcbb2a10a4fcb46b75b2a1854db554,
         type: 3}
       propertyPath: m_Name
@@ -1328,6 +1378,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 876577920301165001, guid: 09dcbb2a10a4fcb46b75b2a1854db554,
     type: 3}
   m_PrefabInstance: {fileID: 549702110}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &622502915 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4722872785648642680, guid: 6084a22ff853d61449436fcf6e2f8619,
+    type: 3}
+  m_PrefabInstance: {fileID: 1953729840}
   m_PrefabAsset: {fileID: 0}
 --- !u!43 &633846471
 Mesh:
@@ -1792,6 +1848,11 @@ PrefabInstance:
       propertyPath: _isLocked
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5006034998168454293, guid: 4b7e8d8046d3d414bbaf8054eea582ef,
+        type: 3}
+      propertyPath: _howToOpen
+      value: Locked! Check the terminal!
+      objectReference: {fileID: 0}
     - target: {fileID: 5059767374995049970, guid: 4b7e8d8046d3d414bbaf8054eea582ef,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2255,6 +2316,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4131458367799505999, guid: 09dcbb2a10a4fcb46b75b2a1854db554,
+        type: 3}
+      propertyPath: powerLevel
+      value: 
+      objectReference: {fileID: 11400000, guid: fe935846f7a1a384b86aa6cacc28f343,
+        type: 2}
     - target: {fileID: 4193827149080483240, guid: 09dcbb2a10a4fcb46b75b2a1854db554,
         type: 3}
       propertyPath: m_Name
@@ -3313,10 +3380,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: PowerReciever
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4131458367799505999, guid: 09dcbb2a10a4fcb46b75b2a1854db554, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4193827149080483240, guid: 09dcbb2a10a4fcb46b75b2a1854db554,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 180367521}
   m_SourcePrefab: {fileID: 100100000, guid: 09dcbb2a10a4fcb46b75b2a1854db554, type: 3}
 --- !u!1 &1503482128
 GameObject:
@@ -4245,6 +4317,11 @@ PrefabInstance:
       propertyPath: controlPanelType
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5006034998168454293, guid: 4b7e8d8046d3d414bbaf8054eea582ef,
+        type: 3}
+      propertyPath: _howToOpen
+      value: Locked! Press the pressure pad!
+      objectReference: {fileID: 0}
     - target: {fileID: 5059767374995049970, guid: 4b7e8d8046d3d414bbaf8054eea582ef,
         type: 3}
       propertyPath: m_RootOrder
@@ -4638,6 +4715,11 @@ PrefabInstance:
       propertyPath: _isLocked
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5006034998168454293, guid: 4b7e8d8046d3d414bbaf8054eea582ef,
+        type: 3}
+      propertyPath: _howToOpen
+      value: Unlocked!
+      objectReference: {fileID: 0}
     - target: {fileID: 5059767374995049970, guid: 4b7e8d8046d3d414bbaf8054eea582ef,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4703,6 +4785,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5059767374995049970, guid: 4b7e8d8046d3d414bbaf8054eea582ef,
     type: 3}
   m_PrefabInstance: {fileID: 2136520796}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2138504436 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1818638763383325060, guid: 09dcbb2a10a4fcb46b75b2a1854db554,
+    type: 3}
+  m_PrefabInstance: {fileID: 1438720743}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2445558834723828294
 PrefabInstance:
