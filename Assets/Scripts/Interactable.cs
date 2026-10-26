@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using StarterAssets;
 using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
+    private StarterAssetsInputs _starterAssetsInputs;
     [SerializeField] private GameObject _UIContainer;
     //referencing for IInteractable, because we use it here for all type interactables(pickups, doors, etc.)
     private IInteractable _interactable;
@@ -11,6 +13,8 @@ public class Interactable : MonoBehaviour
 
     private void Awake()
     {
+        _starterAssetsInputs = GameObject.FindWithTag("Player").GetComponent<StarterAssetsInputs>();
+
         if (_UIContainer != null) _UIContainer.SetActive(false);
         _interactable = GetComponent<IInteractable>();
         _isInteractable = false;
@@ -28,7 +32,7 @@ public class Interactable : MonoBehaviour
 
     private void Update()
     {
-        if (_isInteractable && Input.GetKeyDown(KeyCode.E))
+        if (_isInteractable && _starterAssetsInputs.interact)//instead of Input.GetKeyDown(KeyCode.E)
         {
             _interactable.Interact();
         }
