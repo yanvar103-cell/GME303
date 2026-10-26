@@ -552,6 +552,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6051951192065010191, guid: d03cb15983a25bd46b5998d9422626b1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6117410976680124670, guid: d03cb15983a25bd46b5998d9422626b1,
         type: 3}
       propertyPath: m_RootOrder
@@ -2839,6 +2844,18 @@ MonoBehaviour:
   _targets:
   - {fileID: 1829763242}
   _isPressed: 0
+--- !u!114 &1286214394 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2070925441746177913, guid: a1a802ecaf6775746bb2a929fb554ad8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1765554676}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1298224284 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8101059038783356897, guid: 4b7e8d8046d3d414bbaf8054eea582ef,
@@ -3918,7 +3935,7 @@ PrefabInstance:
     - target: {fileID: 2070925442191277752, guid: a1a802ecaf6775746bb2a929fb554ad8,
         type: 3}
       propertyPath: Damping.y
-      value: 0.25
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2070925442191277752, guid: a1a802ecaf6775746bb2a929fb554ad8,
         type: 3}
@@ -4142,6 +4159,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4162159888897259364, guid: 6084a22ff853d61449436fcf6e2f8619,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162159888897259364, guid: 6084a22ff853d61449436fcf6e2f8619,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 4697759869364959119, guid: 6084a22ff853d61449436fcf6e2f8619,
         type: 3}
       propertyPath: m_Name
@@ -4161,6 +4188,26 @@ PrefabInstance:
         type: 3}
       propertyPath: elevatorLevels.Array.data[2]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7173266539773008475, guid: 6084a22ff853d61449436fcf6e2f8619,
+        type: 3}
+      propertyPath: _vCam
+      value: 
+      objectReference: {fileID: 1286214394}
+    - target: {fileID: 7173266539773008475, guid: 6084a22ff853d61449436fcf6e2f8619,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7173266539773008475, guid: 6084a22ff853d61449436fcf6e2f8619,
+        type: 3}
+      propertyPath: _vCamDistElevator
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622484859344834113, guid: 6084a22ff853d61449436fcf6e2f8619,
+        type: 3}
+      propertyPath: _isPoweredUp
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9017256698139505834, guid: 6084a22ff853d61449436fcf6e2f8619,
         type: 3}
@@ -4215,6 +4262,11 @@ PrefabInstance:
     - target: {fileID: 9017256698139505834, guid: 6084a22ff853d61449436fcf6e2f8619,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9205376716012205708, guid: 6084a22ff853d61449436fcf6e2f8619,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4664,7 +4716,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _lootItem:
-  - {fileID: 5998351064986382625, guid: 8f3a38f716064cc4eb0d598381f43950, type: 3}
   - {fileID: 5998351064986382625, guid: c3e61b8cccdb0c74bac702eb6b795877, type: 3}
   _minNumber: 1
   _maxNumber: 3
