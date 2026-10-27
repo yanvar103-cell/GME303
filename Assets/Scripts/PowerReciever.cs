@@ -40,5 +40,10 @@ public class PowerReciever : PowerBase //Inherit from the PowerBase
     {
         base.OnCollisionExit(collision);
         _isActivated = false;
+        foreach (GameObject _target in _targets)
+        {
+            if (_target.TryGetComponent<IInteractable>(out IInteractable interactable))
+                interactable.Activate(_isActivated);
+        }
     }
 }
