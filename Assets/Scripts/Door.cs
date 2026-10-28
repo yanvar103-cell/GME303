@@ -48,13 +48,10 @@ public class Door : MonoBehaviour, IInteractable
                 if (HasRequiredItem(_requiredItem))
                     Activate(true); //Unlock the door(Activate)
                 else
-                {
-                    Debug.Log(_howToOpen); //If we don't have the required item, check the terminal
-                    UIMessageDisplay.Show(_howToOpen);
-                }
+                    UIMessageDisplay.Show(_howToOpen); //If we don't have the required item, check the terminal
             }
-            Debug.Log(_howToOpen);//If it doesn't require the item
-            UIMessageDisplay.Show(_howToOpen);
+            else
+                UIMessageDisplay.Show(_howToOpen);//If it doesn't require the item
         }
     }
 

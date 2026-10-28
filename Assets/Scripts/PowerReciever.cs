@@ -21,7 +21,7 @@ public class PowerReciever : PowerBase //Inherit from the PowerBase
             int powerCoreValue =  collision.gameObject.GetComponent<PowerCore>().powerLevel;
             if (powerCoreValue == requiredPowerLevel)
             {
-                Debug.Log("Sufficient power!");
+                UIMessageDisplay.Show("Sufficient power!");
                 _isActivated = true;
                 foreach (GameObject _target in _targets)
                 {
@@ -30,9 +30,10 @@ public class PowerReciever : PowerBase //Inherit from the PowerBase
                 }
             }
             else if (powerCoreValue > requiredPowerLevel)
-                Debug.Log("Too much power!");
+                UIMessageDisplay.Show("Too much power!");
+
             else
-                Debug.Log("Insufficient power!");
+                UIMessageDisplay.Show("Insufficient power!");
         }
     }
 

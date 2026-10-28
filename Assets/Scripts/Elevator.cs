@@ -60,10 +60,7 @@ public class Elevator : MonoBehaviour, IInteractable
             _playerInput.SwitchCurrentActionMap("UI");
         }
         else
-        {
-            Debug.Log(_howToActivate);
             UIMessageDisplay.Show(_howToActivate);
-        }
     }
 
     public void Activate(bool _isActive)

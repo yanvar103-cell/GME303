@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,9 @@ public class InventoryManager : MonoBehaviour
 {
     //Reference to the InventoryManager as a static variable
     public static InventoryManager Instance; //static means global which accessible from anywhere.
+
+    //Event that tells other scripts (like the UI) that the list has changed
+    public event Action OnInventoryChanged;
 
     //Create a list of all inventory items
     public List<AllItems> _inventoryItems = new List<AllItems>();
@@ -33,6 +37,7 @@ public class InventoryManager : MonoBehaviour
         if(!_inventoryItems.Contains(item))//If the item is not in the list
         {
             _inventoryItems.Add(item);//Add the item
+            OnInventoryChanged?.Invoke();//Tell the UI to update
         }
     }
 
@@ -42,6 +47,7 @@ public class InventoryManager : MonoBehaviour
         if (_inventoryItems.Contains(item))//If the item is in the list
         {
             _inventoryItems.Remove(item);//Remove the item
+            OnInventoryChanged?.Invoke();//Tell the UI to update
         }
     }
 }
